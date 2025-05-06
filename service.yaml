@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-frontend-service
+spec:
+  selector:
+    app: react-frontend
+  ports:
+    - protocol: TCP
+      port: 80  # Порт на якому буде доступний сервіс
+      targetPort: 80  # Порт, на якому контейнер слухає
+  type: LoadBalancer  # Тип сервісу, який відкриває доступ ззовні

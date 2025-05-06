@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-frontend-deployment
+spec:
+  replicas: 3  # Кількість реплік (контейнерів)
+  selector:
+    matchLabels:
+      app: react-frontend
+  template:
+    metadata:
+      labels:
+        app: react-frontend
+    spec:
+      containers:
+      - name: react-frontend
+        image: gcr.io/teak-serenity-452810-t0/react-frontend:latest  # Вказати правильний образ
+        ports:
+        - containerPort: 80  # Порт всередині контейнера
+        resources:
+          limits:
+            memory: "512Mi"  # Ліміти пам'яті
+            cpu: "500m"  # Ліміти CPU
