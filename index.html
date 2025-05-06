@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Стильна Веб Сторінка</title>
+    <style>
+        /* Загальні стилі */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Стилі для шапки */
+        header {
+            background: linear-gradient(135deg, #6e7dff, #4d60ff);
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Навігація */
+        nav {
+            background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Основний контент */
+        main {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Картки для послуг */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .services .service-card {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .services .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .services .service-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        /* Контакти */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #4d60ff;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #333;
+        }
+
+        /* Футер */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Анімації для заголовків */
+        .animate-title {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="animate-title">Ласкаво просимо до нашої компанії!</h1>
+        <p>Ми надаємо високоякісні послуги для ваших потреб.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2 class="animate-title">Головна</h2>
+            <p>Ми надаємо інноваційні рішення для вашого бізнесу та проектів. Тут ви знайдете всі послуги, які вам необхідні для розвитку.</p>
+        </section>
+
+        <section id="about">
+            <h2 class="animate-title">Про нас</h2>
+            <p>Наша компанія створена для того, щоб допомагати вам в досягненні ваших цілей. Ми прагнемо надавати високоякісні та ефективні послуги.</p>
+        </section>
+
+        <section id="services">
+            <h2 class="animate-title">Наші послуги</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Веб-розробка</h3>
+                    <p>Ми створюємо веб-сайти, що працюють на різних платформах з чудовим дизайном та високою продуктивністю.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SEO оптимізація</h3>
+                    <p>Покращуємо видимість вашого сайту в пошукових системах, залучаючи більше потенційних клієнтів.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Дизайн</h3>
+                    <p>Ми пропонуємо креативні рішення для дизайну, щоб ваш сайт виглядав привабливо та зручно.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="animate-title">Контакти</h2>
+            <p>Зв'язатися з нами можна через форму або за вказаними даними.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше повідомлення" rows="4" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Моя компанія | Всі права захищено</p>
+    </footer>
+
+</body>
+</html>
